@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>creacion de Familiar</h1>
+
+    <h2>Nombre: <span class="badge badge-success">{{new_member.name}}</h2>
+    <h2>Apellido: <span class="badge badge-success">{{new_member.surname}}</span></h2>
+    <h2>Edad: <span class="badge badge-success">{{new_member.age}}</span></h2>
+    <h2>DNI: <span class="badge badge-success">{{new_member.dni}}</span></h2>
+    <!--este if es para cambiar el color de verde a rojo dependiendo si esta vivo o no-->
+    {% if new_member.alive %}
+        <h2>Vive?: <span class="badge badge-success">{{new_member.alive}}</span></h2>
+    {% endif %}
+    {% if new_member.alive == False %}
+        <h2>Vive?: <span class="badge badge-danger">{{new_member.alive}}</span></h2>
+    {% endif %}
+</body>
+</html>
