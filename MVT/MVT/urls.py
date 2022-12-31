@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('create-family-members/', create_family_memebers),
-    path('list_families.html/', list_family_members)
+    path('list_families/', list_family_members)
 ]
