@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Listado de familiares</h1>
+
+    {% for miembro in family %}
+       <p>name: {{miembro.name}} </p>
+       <p>surname: {{miembro.surname}} </p>
+       <p>age: {{miembro.age}}</p>
+       <p>dni: {{miembro.dni}}</p>
+
+        {% if miembro.alive == True %}
+           <p> Esta viv@</p>
+        {% else %}
+           <p> Falleció </p>
+
+        {% endif %}
+    
+    {% endfor %}
+</body>
+</html>
