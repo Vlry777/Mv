@@ -21,6 +21,6 @@ from Familia.views import create_family_memebers, list_family_members
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    # path('create-family-members/', create_family_memebers),
+    path('create-family-members/<str:name>/<str:surname>/<int:age>/<int:dni>/<str:alive>/', create_family_memebers),
     path('list_families/', list_family_members)
 ]
